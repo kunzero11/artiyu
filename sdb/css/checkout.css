@@ -1,0 +1,26 @@
+
+.container {
+    max-width: 960px;
+  }
+  hr
+  {
+    height: 20%;
+    background-color: black;
+  }
+  .btn
+  {
+    margin-top: -60px;
+    margin-left: 650px;
+  }
+
+  .btn1
+  {
+    margin-right: 650px;
+    text-decoration: none;
+  }
+
+ /*goods na navbar */
+.modal-header
+{
+  background-color: rgba(255,0,0,0.7);
+}

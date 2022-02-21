@@ -1,0 +1,186 @@
+/*goods na navbar */
+
+.navbar-fixed-top
+{
+	background-color:rgba(255,0,0,0.7);
+}
+
+.nav-link
+{
+	font-size: 1.2rem;
+	color: black!important;
+    font-weight: bold;
+
+}
+.nav-link:hover {
+	background-color: white!important;
+}
+.text-search, .button-search:hover
+{
+
+	border-radius: auto;
+	background-color: white!important;
+}
+.text-search
+{
+	margin-left:103px;
+	font-size: 0.75rem;
+	width: 100px!important;
+}
+svg
+{
+	color: black!important;
+}
+.order-now
+{
+	
+	color: black!important;
+	margin-left:700px;
+
+}
+
+
+svg
+{
+	color: black;
+    margin-top: auto;
+}
+
+hr {
+		
+    height: 1px;
+    width: auto;
+    background-color: black;
+    margin-top: 1.25rem
+
+   
+}
+/*goods na navbar */
+
+body {
+ 
+    min-height: 100vh;
+    vertical-align:middle;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold
+}
+
+.title {
+    margin-bottom: 5vh
+}
+
+.card {
+    margin: auto;
+    margin-bottom: 80px;
+    margin-top: 130px;
+    max-width: 900px;
+    width: 80%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto
+    }
+}
+.cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
+}
+
+@media(max-width:767px) {
+    .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem
+    }
+}
+
+.summary {
+    background-color: rgba(218, 21, 21, 0.582);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65)
+}
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem
+    }
+}
+
+.summary .col-2 {
+    padding: 0
+}
+
+.summary .col-10 {
+    padding: 0
+}
+
+.row
+{
+	margin-left:auto;
+	margin-right: auto;
+	
+}
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+}
+
+
+
+a {
+    padding: 0 1vh
+}
+
+.close {
+    margin-left: auto;
+    font-size: 0.7rem
+}
+
+.back-to-shop {
+    margin-top: 4.5rem
+}
+
+h5 {
+    margin-top: 4vh
+}
+
+select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+   
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center
+}

@@ -1,0 +1,108 @@
+
+/*Why do we use REM*/
+/*Difference between REM and PX?*/
+
+html {
+	scroll-behavior: smooth;
+   }
+
+.nav-link
+{
+	font-size: 1.2rem;
+	color: black!important;
+    font-weight: bold;
+
+}
+.nav-link:hover {
+	background-color: white!important;
+}
+.text-search, .button-search:hover
+{
+
+	border-radius: auto;
+	background-color: white!important;
+}
+.text-search
+{
+	margin-left:103px;
+	font-size: 0.75rem;
+	width: 100px!important;
+}
+svg
+{
+	color: black!important;
+}
+.order-now
+{
+	
+	color: black!important;
+	margin-left:700px;
+	font-weight: bold;
+	border-radius: 100%;
+}
+
+.order-now :hover{
+	background-color: rgba(255,0,0,0.3)!important;
+}
+.carousel-indicators li 
+{
+	width: 10px;
+	height: 10px;
+	background-color: gray;
+	border-radius: 50%;
+}
+.img-fluid {
+	max-width: fit-content;
+	height: fit-content;
+}
+.navbar-fixed-top.scrolled
+{
+	background-color:rgba(255,0,0,0.7);
+	transition: background-color 1000ms linear;
+}
+u 
+{
+	color: black;
+}
+hr {
+      
+        height: 1px;
+		background-color: black;
+       
+}
+.row
+{
+	margin-left:auto;
+	margin-right: auto;
+	margin-bottom: 3%;
+}
+.table
+{
+	margin-right: 70%;
+}
+#btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+.card
+{
+	border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: auto;
+  cursor: pointer;
+}
+.card:hover
+{
+	transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+button:focus-within .dropdown-menu
+{
+	opacity: 1;
+	visibility: visible;
+}
