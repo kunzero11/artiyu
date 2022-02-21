@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Library
+</name>
+</assembly>
+<members>
+<member name="T:Library.Libsystem1DataSet.BorrowersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Library.Libsystem1DataSet.LibInfoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Library.Libsystem1DataSet.BorrowersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Library.Libsystem1DataSet.LibInfoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Library.Libsystem1DataSet.BorrowersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Library.Libsystem1DataSet.LibInfoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Library.Libsystem1DataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Library.Libsystem1DataSetTableAdapters.BorrowersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Library.Libsystem1DataSetTableAdapters.LibInfoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+</members>
+</doc>

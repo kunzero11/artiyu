@@ -1,0 +1,36 @@
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\bin\Debug\Library.exe.config
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.exe
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.xml
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.pdb
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\bin\Debug\Libsystem1.mdb
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\bin\Debug\Library.exe
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\bin\Debug\Library.pdb
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\bin\Debug\Library.xml
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.frmLib.resources
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.Resources.resources
+C:\Users\Christopher Lim\Documents\Visual Studio 2005\Projects\Library\Library\obj\Debug\Library.vbproj.GenerateResource.Cache
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\Debug\Library.exe.config
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.exe
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.xml
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.pdb
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\Debug\Libsystem1.mdb
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\Debug\Library.exe
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\Debug\Library.pdb
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\Debug\Library.xml
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.frmLib.resources
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.Resources.resources
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\Debug\Library.vbproj.GenerateResource.Cache
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\x86\Debug\Library.exe.config
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.frmLib.resources
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.Resources.resources
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.vbproj.GenerateResource.Cache
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\x86\Debug\Libsystem1.mdb
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\x86\Debug\Library.exe
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\x86\Debug\Library.pdb
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\bin\x86\Debug\Library.xml
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.exe
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.xml
+C:\Users\Christopher Lim\Desktop\LIBSYSTEM\Library\Library\obj\x86\Debug\Library.pdb
