@@ -1,0 +1,157 @@
+import java.util.*;
+
+public class LinkedList {
+
+	Node head;
+
+	static class Node {
+
+		String data;
+		Node next;
+
+		Node(String d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+
+	// **************INSERTION**************
+
+	public static LinkedList insert(LinkedList list, String data)
+	{
+		Node new_node = new Node(data);
+		new_node.next = null;
+
+		if (list.head == null) {
+			list.head = new_node;
+		}
+		else {
+
+			Node last = list.head;
+			while (last.next != null) {
+				last = last.next;
+			}
+
+			last.next = new_node;
+		}
+
+		return list;
+	}
+
+	// **************TRAVERSAL**************
+
+	public static void printList(LinkedList list)
+	{
+		Node currNode = list.head;
+
+		System.out.print("\nLinkedList: ");
+
+		while (currNode != null) {
+
+			System.out.print(currNode.data + " ");
+
+			currNode = currNode.next;
+		}
+		System.out.println("\n");
+	}
+
+	// **************SEARCH**************
+	 public boolean search(Node head, String x)
+	    {
+	        // Base case
+	        if (head == null)
+	            return false;
+
+	        // If key is present in current node,
+	        // return true
+	        if (head.data == x)
+	            return true;
+
+	        // Recur for remaining list
+	        return search(head.next, x);
+    }
+
+
+	// **************DELETION AT A POSITION**************
+
+	public static LinkedList delete(LinkedList list, int index)
+	{
+		// Store head node
+		Node currNode = list.head, prev = null;
+
+		if (index == 0 && currNode != null) {
+			list.head = currNode.next;
+
+			System.out.println(index + " position element deleted");
+
+			return list;
+		}
+
+
+		if (currNode == null) {
+			System.out.println(index + " position element not found");
+		}
+
+		// return the List
+		return list;
+	}
+
+	// **************MAIN METHOD**************
+	public static void main(String[] args)
+	{
+		int choice;
+		Scanner in = new Scanner(System.in);
+		LinkedList list = new LinkedList();
+
+		list = insert(list, "Bryan");
+				list = insert(list, "James");
+				list = insert(list, "Karl");
+				list = insert(list, "Norman");
+				list = insert(list, "Eunice");
+				list = insert(list, "Jen");
+				list = insert(list, "Irish");
+				list = insert(list, "Lovely");
+				list = insert(list, "Rose");
+				list = insert(list, "Berly");
+
+				// Print the LinkedList
+				printList(list);
+
+
+		System.out.println("MENU:\n" + "\n" + "Press 1 = Insert \n" + "Press 2 = Delete \n" + "Press 3 = Display \n" + "Press 4 = Search \n");
+		System.out.println("Input choice: ");
+		choice = in.nextInt();
+
+		if(choice == 1){
+
+			System.out.print("Insert: ");
+			String data = in.next();
+			insert(list, data);
+
+		    printList(list);
+		}
+
+
+	    else if(choice==2){
+				delete(list,0);
+
+				printList(list);
+}
+        else if(choice == 3){
+           printList(list);
+	   }
+	   else if(choice == 4){
+	      System.out.println("Input name: ");
+	      String data = in.next();
+	      if (list.search(list.head, data))
+		     System.out.println(" Not Found");
+
+		  else
+            System.out.println("Found");
+		}
+		else{
+			System.out.println("Invalid Input");
+		}
+	}
+}

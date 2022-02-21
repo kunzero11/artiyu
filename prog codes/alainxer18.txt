@@ -1,0 +1,86 @@
+10% = 1000
+15 = 
+For each filing status there are six tax rates. Each rate is applied to a certain amount of taxable income. For example, of a taxable income of $400,000 for single filers, $8,350 is taxed at 10%, (33,950 – 8,350) at 15%, (82,250 – 33,950) at 25%, (171,550 – 82,250) at 28%, (372,950 – 171,550) at 33%, and (400,000 – 372,950) at 35%.
+
+400k income
+35% = (400,000 – 372,950)
+33% = (372,950 – 171,550)
+28% = (171,550 – 82,250)
+25% = (82,250 – 33,950)
+15% = (33,950 – 8,350)
+10% = (33,950 – 8,350)
+
+hi5 = (taxin – 372,950)
+hi4 = (372,950 – hi5)
+hi3 = (171,550 – hi4)
+hi2 = (82,250 – 33,950)
+hi1 = (33,950 – 8,350)
+hi = (33,950 – 8,350)
+
+
+
+------------------
+if file == 0:
+    if taxin <= 8350:
+        print(str1,strcons)
+    if taxin >= 8351 and taxin <= 33950:
+        print(str2,strcons)
+    if taxin >= 33951 and taxin <= 82250:
+        print(str3,strcons)
+    if taxin >= 82251 and taxin <= 171550:
+        print(str4,cons)
+    if taxin >= 171551 and taxin <= 372950:
+        print(str5,strcons)
+    if taxin >= 372951:
+        print(str6,strcons)
+
+elif file == 1:
+    if taxin <= 16700:
+        print(str1,strcons)
+    if taxin >= 16701 and taxin <= 67900:
+        print(str2,strcons)
+    if taxin >= 67901 and taxin <= 137050:
+        print(str3,strcons)
+    if taxin >= 137051 and taxin <= 208850:
+        print(str4,strcons)
+    if taxin >= 208851 and taxin <= 372950:
+        print(str5,strcons)
+    if taxin >= 372951:
+        print(str6,strcons)
+
+elif file == 2:
+    if taxin <= 8350:
+        print(str1,strcons)
+    if taxin >= 8351 and taxin <= 33950:
+        print(str2,strcons)
+    if taxin >= 33951 and taxin <= 68525:
+        print(str3,strcons)
+    if taxin >= 68526 and taxin <= 104425:
+        print(str4,strcons)
+    if taxin >= 104426 and taxin <= 186475:
+        print(str5,strcons)
+    if taxin >= 186476:
+        print(str6,strcons)
+
+elif file == 3:
+    if taxin <= 11950:
+        print(str1,strcons)
+    if taxin >= 11951 and taxin <= 45500:
+        print(str2,strcons)
+    if taxin >= 45500 and taxin <= 117450:
+        print(str3,strcons)
+    if taxin >= 117451 and taxin <= 190200:
+        print(str4,strcons)
+    if taxin >= 190201 and taxin <= 372950:
+        print(str5,strcons)
+    if taxin >= 372951:
+        print(str6,str cons)       
+-----------------------------------
+ 400k income
+10% = 8350
+15% = 33950 (25600)
+25% = 82250 (48300)
+28% = 171,550 (89300)
+33% = 372,950 (201400)
+35% = 372,951 above
+

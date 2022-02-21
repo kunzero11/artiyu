@@ -1,0 +1,69 @@
+BUBBLE SORT
+public class lunasort {
+	 public static void main(String[] args) {
+	      String str[] = {"l","i","m","c","h","r","i","s","t","o","p","h","e","r"};  
+	      String temp;
+	      
+          System.out.println("Array Before Bubble Sort");  
+          for(int i=0; i < str.length; i++){  
+                  System.out.print(str[i] + " ");  
+          }  
+	      System.out.println("\nSorted string...");
+	      for (int j = 0; j < str.length; j++) {
+	         for (int i = j + 1; i < str.length; i++) {
+	            // comparing strings
+	            if (str[i].compareTo(str[j]) < 0) {
+	               temp = str[j];
+	               str[j] = str[i];
+	               str[i] = temp;
+	            }
+	         }
+	         System.out.print(str[j] + ",");
+	      }
+	   }
+	}
+----------------------------------------------------
+INSERTION SORT
+public class lunainsertion {
+		 public static void main(String[] args){
+			String str[] = {"l","i","m","c","h","r","i","s","t","o","p","h","e","r"};  
+			String temp; 
+
+			   System.out.println("Array Before Insertion Sort");  
+		          for(int i=0; i < str.length; i++){  
+		                  System.out.print(str[i] + " ");  
+		          }  
+			 System.out.print("\nSorted string...\n");
+			 for(int j = 0; j <str.length; j++){  
+			 for(int i = j + 1 ; i < str.length; i++){
+			 if(str[i].compareTo(str[j])<0) {
+			 temp = str[j];
+			 str[j]=str[i];
+			 str[i]=temp;
+			 }
+			 }
+			 System.out.print(str[j] + ",");
+			 }   }	 }
+---------------------------------------
+SELECTION SORT
+public class lunaselect {
+	 public static void main(String []args) {
+	      String str[] = {"l","i","m","c","h","r","i","s","t","o","p","h","e","r"};  
+         System.out.println("Array Before Selection Sort");  
+         for(int i=0; i < str.length; i++){  
+                 System.out.print(str[i] + " ");  
+         }  
+	      System.out.println("\nSorted string...");
+	    for ( int j=0; j < str.length-1; j++ )
+	    {
+	      int min = j;
+	      for ( int k=j+1; k < str.length; k++ )
+	        if ( str[k].compareTo( str[min] ) < 0 ) min = k;  
+	      String temp = str[j];
+	      str[j] = str[min];
+	      str[min] = temp;
+	    System.out.print(str[j] + ",");
+	  }
+}
+}
+			    

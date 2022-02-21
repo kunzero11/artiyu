@@ -1,0 +1,95 @@
+PR. A
+Option Explicit
+Dim age As Integer
+Dim remarks As Single
+
+Private Sub cmdEvaluate_Click()
+If txtAge <= 17 Then
+txtRemarks.Text = "Minor"
+   End If
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+-------------------------------------------------------
+PR. B
+Option Explicit
+Dim age As Integer
+Dim remarks As Single
+
+Private Sub cmdEvaluate_Click()
+If txtAge <= 17 Then
+txtRemarks.Text = "Minor"
+Else
+txtRemarks.Text = "Adult"
+   End If
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+------------------------------------------------------------
+PR. C
+Option Explicit
+Dim age As Integer
+Dim remarks As Single
+
+Private Sub cmdEvaluate_Click()
+If txtAge <= 17 Then
+txtRemarks.Text = "Minor"
+ElseIf txtAge <= 59 Then
+txtRemarks.Text = "Adult"
+Else
+txtRemarks.Text = "Senior"
+   End If
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+-------------------------------------------------
+PR. D
+Option Explicit
+Dim age As Integer
+Dim remarks As Single
+
+Private Sub cmdEvaluate_Click()
+If txtAge <= 17 Then
+txtRemarks.Text = "Minor"
+ElseIf txtAge <= 59 Then
+txtRemarks.Text = "Adult"
+ElseIf txtAge <= 99 Then
+txtRemarks.Text = "Senior"
+Else
+txtRemarks.Text = "Centennial"
+   End If
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+------------------------------
+PR. E (Select Case)
+Option Explicit
+Dim age As Integer
+Dim remarks As Single
+
+Private Sub cmdEvaluate_Click()
+age = txtAge.Text
+Select Case age
+Case 0 To 17
+txtRemarks.Text = "Minor"
+Case 18 To 59
+txtRemarks.Text = "Adult"
+Case 60 To 99
+txtRemarks.Text = "Senior"
+Case Else
+txtRemarks.Text = "Centennial"
+   End Select
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+

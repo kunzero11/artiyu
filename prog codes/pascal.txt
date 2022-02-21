@@ -1,0 +1,35 @@
+
+Private Sub cmdDisplay_Click()
+Dim rows As Integer, i As Integer
+rows = 10
+For i = 1 To rows
+Print String$(i, "*")
+Next
+For i = 9 To 1 Step -1
+Print String$(i, "*")
+Next
+End Sub
+-------------------------
+Private Sub cmdDisplay_Click()
+Dim rows As Integer, i As Integer
+    rows = 10
+    For i = 1 To rows * 2 Step 2
+        rows = rows - 1
+    Print String$(rows, " ") & String$(i, "*")
+    Next
+End Sub
+---------------------------
+ For i = 10 To 1 Step -1
+        rows = rows + 1
+    Print String$(rows, " ") & String$(i, "*")
+    Next
+---------------------------
+ rows = 10
+    For i = 1 To rows
+        rows = rows - 1
+    Print String$(rows, " ") & Space(10) & String$(i, "*")
+    Next
+    For i = 18 To 1 Step -2
+        rows = rows + 1
+    Print String$(rows, " ") & Space(10) & String$(i, "*")
+    Next

@@ -1,0 +1,21 @@
+Dim age As Integer
+Dim remarks As String
+
+
+Private Sub cmdEvaluate_Click()
+'Evaluates the Age
+If txtAge <= 17 Then
+txtRemarks.Text = "Minor"
+ElseIf txtAge <= 59 Then
+txtRemarks.Text = "Adult"
+Else
+txtRemarks.Text = "Senior"
+   End If
+End Sub
+
+
+
+Private Sub cmdExit_Click()
+End
+End Sub
+

@@ -1,0 +1,130 @@
+// Act03.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <list>
+#include <iterator>
+#include <algorithm>
+
+using namespace std;
+
+class Actthree { 
+private: 
+	char a; 
+	int c;
+	list <int> intList;
+public:	   
+	int z;
+	int b;
+	int d;
+	int e;
+	void menu();
+	void sitch();
+	void askUser();
+	void display();
+	void remove();
+	void sort();
+	void insert();
+   };
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	Actthree fed;
+	do{
+	fed.menu();
+	fed.sitch();
+	}while(fed.z != 1);
+	fed.display();
+	fed.remove();
+	fed.sort();
+	fed.insert();
+	return 0;
+};
+
+void Actthree::menu()
+{
+	cout<<"MENU\n"<<endl;
+	cout<<"[1] ENTER VALUES"<<endl;
+	cout<<"[2] INSERT VALUES"<<endl;
+	cout<<"[3] DELETE VALUES"<<endl;
+	cout<<"[4] SORT AND DISPLAY VALUES"<<endl;
+	cout<<"[5] DISPLAY ONLY"<<endl;
+	cout<<"[6] EXIT\n"<<endl;
+	
+	
+	cout<<"Operation: "<<endl;
+	cin>>a;
+	cout<<endl;
+}
+
+void Actthree::sitch(){
+	switch(a)
+	{
+	case'1':
+		askUser();
+		break;
+    case'2':
+		insert();
+		break;
+    case'3':
+		remove(); 
+		break;
+    case'4':
+		sort(); 
+		break;
+	case'5':
+		display();
+		break;
+    case'6':
+		exit (EXIT_SUCCESS);
+		break;
+  	default:
+		cout<<"Not in Range"<<endl;
+	    system("pause");		
+	}
+}
+
+void Actthree::askUser(){
+	cout<<"Enter a number: ";
+	do {
+		cin>>b;
+		intList.push_back(b);
+	}     while (b>=0);    
+	intList.pop_back();
+}
+
+void Actthree::display(){
+   ostream_iterator<int> screen(cout, " ");
+   cout<<"VALUES: ";
+   copy(intList.begin(), intList.end(), screen);
+   cout<<endl;
+}
+
+void Actthree::remove(){
+   cout<<"Enter value that you want to remove: "<<endl;
+   cin>>c;
+   intList.remove(c);
+   cout<<endl;
+}
+
+void Actthree::sort(){
+   intList.sort();
+   ostream_iterator<int> screen(cout, " ");
+   cout<<"SORTED VALUES: ";
+   copy(intList.begin(), intList.end(), screen);
+   cout<<endl;
+}
+
+void Actthree::insert(){
+	list<int>::iterator it = intList.begin(); 
+   ostream_iterator<int> screen(cout, " ");
+   cout<<"Select Nodes: ";
+   cin>>d;
+   cout<<"Insert Value: ";
+   cin>>e;
+   advance(it,d); 
+   intList.insert(it,e);
+   copy(intList.begin(), intList.end(), screen);
+   cout<<endl;
+}

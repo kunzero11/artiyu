@@ -1,0 +1,81 @@
+import java.util.LinkedList;
+import java.util.Scanner; 
+public class norman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+       LinkedList<String> emp = new LinkedList<String>(); 
+		
+		emp.add("Christopher Lim");
+		emp.add("Christian Gutierrez");
+		emp.add("Jerald Arguelles");
+		emp.add("Rommel Gragasin");
+		emp.add("Justin Dela Serna");
+		emp.add("James Lloyd Estanio");
+		emp.add("Camille Joy Lim");
+		emp.add("Kathlene Corpus");
+		emp.add("Charlie Braganza");
+		emp.add("Lhea Alexis Dayrit");
+		
+		System.out.println("Employee List:");
+		  for(int p=0; p < emp.size(); p++)
+		   {
+		      System.out.println("Employee # "+p+": "+emp.get(p));
+		    } 
+			
+			System.out.println("\n");
+			char ch;
+			do {  
+			System.out.println("\tMENU");
+			  System.out.println("[1]INSERT");
+			  System.out.println("[2]DELETE");
+			  System.out.println("[3]DISPLAY");
+			  System.out.println("[4]SEARCH");
+			
+		  System.out.println("Enter Operation: ");
+		  String a = sc.next();
+		
+		    
+		  switch (a) {
+		  case "1": 
+			  System.out.print("Enter the name you want to insert ");
+			  String m = sc.next();
+			  emp.addLast(m);
+			  for(int p=0; p < emp.size(); p++)
+			   {
+			      System.out.println("Employee # "+p+": "+emp.get(p));
+			    } 
+			  break;
+		  case "2":
+			  System.out.print("This will delete the first employee, continue? (0 for yes) ");
+			  int n = sc.nextInt();
+			  emp.remove(n);
+			  for(int p=0; p < emp.size(); p++)
+			   {
+			      System.out.println("Employee # "+p+": "+emp.get(p));
+			    } 
+		      break;
+		  case "3":
+			  for(int p=0; p < emp.size(); p++)
+			   {
+			      System.out.println("Employee # "+p+": "+emp.get(p));
+			    } 
+			  break;
+		  case "4": 
+			  System.out.println("Enter the name you want to search: ");
+			  String x = sc.next();
+			
+			  if (emp.contains(x));
+			  System.out.println("found");		
+			  break;
+		  default: 
+			System.out.println("Error");
+			break;
+		  }
+			System.out.println("\nDo you want to continue (Type y or n)");
+           ch = sc.next().charAt(0);                        
+        } while (ch == 'Y'|| ch == 'y');
+	  }  
+	}
+

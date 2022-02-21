@@ -1,0 +1,10 @@
+changelog 
+
+prior notice : I have decided to use this website builder for easy construction of my website, the only downside of this site builder is that you can't have multiple pages and editing html elements is not eligible because it is for pro version only so i'm sorry to dissapoint you but no, your gonna see one page of this website only (blog posts excluded)
+
+
+- November 14 - started using Strikingly as the main website builder for the final project on Web Systems Technologies 
+
+- November 15 - rate button now included (external links to youpoll.me)
+
+- November 16 - edited the homepage background and re-adjusted the rate button 

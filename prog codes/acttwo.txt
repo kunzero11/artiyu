@@ -1,0 +1,256 @@
+// EZ.cpp : Defines the entry point for the console application.
+//
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Acttwo{
+private:
+	int input;
+	vector<int> quick;
+public:
+	void askUser();
+	void output();
+};
+
+int main()
+{
+	Acttwo sort;
+	sort.askUser();
+	system("cls");
+	sort.output();
+	return 0;
+}
+
+void Acttwo::askUser(){
+	do{
+	cout<<"Enter a number: ";
+	cin>>input;
+	quick.push_back(input);
+	}while(input>=0);
+}
+
+void Acttwo::output(){
+	sort(quick.begin(), (quick.end()-1)); 
+    cout << "Sorted Value \n";
+	quick.pop_back();
+    for (auto x : quick) 
+        cout << x << " "; 
+}
+--------------------------------------
+LUNA
+import java.util.Scanner;
+public class lunareverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 String a, reverse = "";
+	      Scanner sc = new Scanner(System.in);
+	     
+	      System.out.println("Enter a string to reverse:");
+	      a = sc.nextLine();
+	     
+	      int length = a.length();
+	     
+	      for (int i = length - 1 ; i >= 0 ; i--)
+	         reverse = reverse + a.charAt(i);
+	         
+	      System.out.println("Reverse of the string: " + reverse);
+         
+	      System.out.println("Bear in mind that " + reverse + " is equivalent to " + a);
+	       
+	}
+
+}
+-------------------------------------------------
+import java.util.Stack;
+import java.util.*;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+public class stack {
+	
+		static int Prec(char ch) 
+
+		{ 
+
+		switch (ch) 
+
+		{ 
+
+		case '+': 
+
+		case '-': 
+
+		return 1; 
+
+		case '*': 
+
+		case '/': 
+
+		return 2; 
+
+		case '^': 
+
+		return 3; 
+
+		} 
+
+		return -1; 
+
+		} 
+
+		static String infixToPostfix(String exp) 
+
+		{ 
+
+
+		String result = new String(""); 
+
+		Stack<Character> stack = new Stack<>(); 
+
+		for (int i = 0; i<exp.length(); ++i) 
+
+		{ 
+
+		char c = exp.charAt(i); 
+
+		if (Character.isLetterOrDigit(c)) 
+
+		result += c; 
+
+		else if (c == '(') 
+
+		stack.push(c); 
+
+		else if (c == ')') 
+
+		{ 
+
+		while (!stack.isEmpty() && stack.peek() != '(') 
+
+		result += stack.pop(); 
+
+		if (!stack.isEmpty() && stack.peek() != '(') 
+
+		return "Invalid Expression"; // invalid expression 
+
+		else
+
+		stack.pop(); 
+
+		} 
+
+		else // an operator is encountered 
+
+		{ 
+
+		while (!stack.isEmpty() && Prec(c) <= Prec(stack.peek())){ 
+
+		if(stack.peek() == '(') 
+
+		return "Invalid Expression"; 
+
+		result += stack.pop(); 
+
+		} 
+
+		stack.push(c); 
+
+		} 
+
+		} 
+
+		while (!stack.isEmpty()){ 
+
+		if(stack.peek() == '(') 
+
+		return "Invalid Expression"; 
+
+		result += stack.pop(); 
+
+		} 
+
+		return result; 
+
+		} 
+
+		static boolean isOperand(char x) 
+		{ 
+
+		return (x >= 'a' && x <= 'z') || 
+
+		(x >= 'A' && x <= 'Z'); 
+		} 
+
+		static String getInfix(String exp) 
+		{ 
+
+		Stack<String> s = new Stack<String>(); 
+
+		for (int i = 0; i < exp.length(); i++) 
+
+		{ 
+
+		if (isOperand(exp.charAt(i))) 
+
+		{ 
+
+		s.push(exp.charAt(i) + ""); 
+
+		} 
+
+		else
+
+		{ 
+
+		String op1 = s.peek(); 
+
+		s.pop(); 
+
+		String op2 = s.peek(); 
+
+		s.pop(); 
+
+		s.push("(" + op2 + exp.charAt(i) + 
+
+		op1 + ")"); 
+
+		} 
+
+		} 
+
+		return s.peek(); 
+		} 
+
+		public static void main(String[] args) 
+
+		{ 
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("A-infix to postfix or B-postfix to infix");
+		System.out.print("\nEnter your desired operation: ");
+		char decision = sc.nextLine().charAt(0);
+
+		if(decision == 'a' || decision== 'A')
+		{
+		System.out.print("enter your infix: ");
+		String ip = sc.nextLine();
+		System.out.println(infixToPostfix(ip));
+		}
+		else if(decision =='b' || decision=='B')
+		{
+		System.out.print("enter your postfix: ");
+		String pi= sc.nextLine();
+		System.out.println(getInfix(pi));
+		}
+		else
+		{
+		System.out.println("A or B only");
+		}
+
+		}
+		
+	}
+
+

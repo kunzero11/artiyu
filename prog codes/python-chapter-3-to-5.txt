@@ -1,0 +1,609 @@
+CHAPTER 3 
+
+Exer 16
+---------------------------------------------
+x= int(input("Input first number: "))
+y = int(input("Input second number: "))
+z = int(input("Input third number: "))
+
+a1 = min(x, y, z)
+a3 = max(x, y, z)
+a2 = (x + y + z) - a1 - a3
+print("Numbers in sorted order: ", a1, a2, a3)
+----------------------------------------------
+
+Exer 17
+----------------------------------------------
+import math
+
+pnds = eval(input("Enter weight in pounds: "))
+hght = eval(input("Enter height in inches : "))
+
+l = ( pnds * 0.45359237)
+m = (hght * 0.0254)
+
+bmi = l / m*m
+
+strcons = "your bmi is: %0.2f"
+str1 = "and you are underweight"
+str2 = "and you are normal"
+str3 = "and you are overweight"
+str4 = "and you are obese" 
+
+if (bmi < 18.5):
+    print(strcons%bmi,str1)
+elif (bmi >= 18.5 and bmi <=24.9):
+    print(strcons%bmi,str2)
+elif (bmi >= 25.9 and bmi <=29.9):
+    print(strcons%bmi,str3)
+elif (bmi >= 30.0):    
+    print(strcons%bmi,str4)
+----------------------------------------------
+
+Exer 18
+----------------------------------------------
+print("\t\tComputing Taxes")
+
+print("Filling Status")
+print("[0] Single")
+print("[1] Married Filling Jointly")
+print("[2] Maried Filling Seperately")
+print("[3] Head of Household")
+status = eval(input("Filling Status: "))
+income = eval(input("Taxable Income: "))
+
+stat = status
+inc = income
+
+if stat == 0:
+        if inc>=0 and inc <=8350:
+            tax = inc*0.10
+        elif inc>=8351 and inc <=33950:
+            tax = inc*0.15
+        elif inc>=33951 and inc <=82250:
+            tax = inc*0.25
+        elif inc>=82251 and inc <=171550:
+            tax = inc*0.28
+        elif inc>=171551 and inc <=372950:
+            tax = inc*0.33
+        elif inc>=372951:
+            tax = inc*0.35
+elif stat == 1:
+        if inc>=0 and inc <=16700:
+            tax = inc*0.10
+        elif inc>=16701 and inc <=67900:
+            tax = inc*0.15
+        elif inc>=67901 and inc <=137050:
+            tax = inc*0.25
+        elif inc>=137051 and inc <=208850:
+            tax = inc*0.28
+        elif inc>=208851 and inc <=372951:
+            tax = inc*0.33
+        elif inc>=372951:
+            tax = inc*0.35
+elif stat == 2:
+        if inc>=0 and inc <=8350:
+            tax = inc*0.10
+        elif inc>=8351 and inc <=33950:
+            tax = inc*0.15
+        elif inc>=33951 and inc <=68525:
+            tax = inc*0.25
+        elif inc>=68526 and inc <=104425:
+            tax = inc*0.28
+        elif inc>=104426 and inc <=186475:
+            tax = inc*0.33
+        elif inc>=186476:
+            tax = inc*0.35
+elif stat == 3:
+        if inc>=0 and inc <=11950:
+            tax = inc*0.10
+        elif inc>=11951 and inc <=45500:
+            tax = inc*0.15
+        elif inc>=45501 and inc <=117450:
+            tax = inc*0.25
+        elif inc>=117450 and inc <=190200:
+            tax = inc*0.28
+        elif inc>=190201 and inc <=372950:
+            tax = inc*0.33
+        elif inc>=372951:
+            tax = inc*0.35
+else:
+    print("INVALID")
+
+print("Income Tax: ", tax)
+----------------------------------------------
+
+Exer 19
+----------------------------------------------
+import math
+import random
+
+print("Ez2 Lotto")
+
+numa= eval(input("Input Two-Digit Number:  "))
+numb = eval(input("Input Two-Digit Number:  "))
+number1 = random.randint(0, 9)
+number2 = random.randint(0, 9)
+
+numbers = numa,numb
+show = number1, number2
+
+if numa == number1 and  numb == number2:
+    print("You got the numbers in exact order,hence you won 10,000$")
+    print("The result is: ",number1,number2)
+
+elif numa == number2 and numb == number1:
+    print("You got the numbers in any order,hence you won 3,000$")
+    print("The result is: ",number1,number2)
+
+elif numa == number1 or numa == number2 :
+    print("You got one number,hence you won 1,000$")
+    print("The result is: ",number1,number2)
+elif numb == number1 or numb == number2 :
+    print("You got one number,hence you won 1,000$")
+    print("The result is: ",number1,number2)
+
+else:
+    print("You did not get any of the two numbers.\n", show, "is the result.")
+--------------------------------------------------------------------------------------------
+
+Exer 20
+--------------------------------------------------------------------------------------------
+import cmath
+a,b,c = eval(input("Enter Integers (A,B,C):"))
+
+x = (b**2)-(4*a*c)
+
+r1= (-b+cmath.sqrt(x))/(2*a)
+r2= (-b-cmath.sqrt(x))/(2*a)
+
+if x>0:
+    print("The roots are:", r1, " and ", r2)
+elif x == 0:
+    print("The root is: ", r1)
+else:
+    print("equation has no real root")
+-----------------------------------------------------------
+
+
+
+Chapter 4
+
+Exer 21
+-----------------------------------------------------------
+tuition = eval(input("Enter Tuition Fee:"))
+sum = 0
+count = 0
+i = tuition
+while i <= 21200:    
+    sum = i
+    i += 700
+    count += 1
+print("Tuition will be doubled in {} years".format(count))
+print("Tuition will be", sum ,"in years")
+------------------------------------------------------------
+
+Exer 22
+------------------------------------------------------------
+numb = eval(input("Enter Number: "))
+
+sum = 0
+i = 1
+while i < numb:
+    sum = sum + i
+    i = i + 1
+print("sum is", sum) # sum is 45
+-----------------------------------------------------------
+
+Exer 23
+-----------------------------------------------------------
+print("Ocean Levels\n")
+
+print("Let's assume the ocean's level right now is at 1.5 millimeters\n")
+
+count = 0
+i = 1.5
+while i <= 37.5:    
+   print(str(i))
+   sum = i  
+   i += 1.5
+   count += 1
+
+print("The ocean level will be at ", sum ,"millimeters in", count,"years") 
+------------------------------------------------------------
+
+Exer 24
+------------------------------------------------------------
+speed = eval(input("What is the speed of the vehicle in mph? "))
+hrs = eval(input("How many hours has it travelled?  "))
+print("\n")
+print("Hour\tDistance Travelled")
+count = 0
+i= 1 
+while i<=hrs:
+    product = speed*i
+    
+    print(str(i),"\t", product)
+    sum = i
+    i += 1
+    count += 1
+------------------------------------------------------------
+
+Exer 25
+------------------------------------------------------------
+print("Penny Converter\n")
+
+days = eval(input("Enter Number of Days: "))
+
+if days == 0:
+    print("Error, Try Again!")
+else:
+    sum = 0
+    sum2 = 0
+    count = 0
+    i = 1
+    product = 1
+
+    print("Days\tPennies")
+    
+    while i <= days:
+        sum2 += product
+        print(str(i),"\t",product)
+        product *= 2
+        i = i + 1# update counter
+# print the sum
+    print("\nThe sum is", sum2)
+    sum = i
+    i += 1
+    count += 1
+    form =  sum2 / 100
+    print("The amount of your pennies is: " ,int(form),"dollars")
+-----------------------------------------------------------------
+
+Exer 26
+-----------------------------------------------------------------
+a = eval(input("Enter today's sales for store 1: "))
+b = eval(input("Enter today's sales for store 2: "))
+c = eval(input("Enter today's sales for store 3: "))
+d = eval(input("Enter today's sales for store 4: "))
+e = eval(input("Enter today's sales for store 5: "))
+
+v = a / 100
+w = b / 100
+x = c / 100
+y = d / 100
+z = e / 100
+
+star_list= ['*' for i in range(int(v))]
+star_list_b= ['*' for i in range(int(w))]
+star_list_c= ['*' for i in range(int(x))]
+star_list_d= ['*' for i in range(int(y))]
+star_list_e= ['*' for i in range(int(z))]
+
+print("\nSALES BAR CHART (Each * = $100)\n")
+
+print("Store 1: ",' '.join(['%s' % i for i in star_list]))
+print("Store 2: ",' '.join(['%s' % i for i in star_list_b]))
+print("Store 3: ",' '.join(['%s' % i for i in star_list_c]))
+print("Store 4: ",' '.join(['%s' % i for i in star_list_d]))
+print("Store 5: ",' '.join(['%s' % i for i in star_list_e]))
+--------------------------------------------------------------
+
+
+Exer 27
+--------------------------------------------------------------
+print("PATTERN A")
+
+lastNumber = 7
+for row in range(1, lastNumber):
+    for column in range(1, row + 1):
+        print(column, end=' ')
+    print("")
+
+
+print("\nPATTERN B")
+
+rows = 6
+
+for i in range (rows,0,-1):
+    for j in range(1, i + 1):
+        print(j, end=' ')
+    print("\r")
+
+print("PATTERN C")
+
+for i in range(1,8):
+    for j in range(8 - i):
+        print("  ", end = "")
+    for j in range(i-1, 0,-1):
+        print(str(j).rjust(2), end = "" )
+    print()
+
+print("\nPATTERN D")
+
+rows = 6
+
+for i in range (rows,0,-1):
+    for j in range(1, i + 1):
+        print(j, end=' ')
+    print("\r")
+--------------------------------------------------------------
+
+
+Exer 28
+--------------------------------------------------------------
+for i in range(1, 9):
+    n = 34-(5*(i-1))+1
+    print((" ")*n, end=' ')
+    for i in range(0,i,1):
+        print((format(2**i, "4d")), end=' ')
+    for i in range(-1+i, -1, -1):
+        print((format(2**i, "4d")), end=' ')   
+    print()
+--------------------------------------------------------------
+
+
+Chapter 5
+
+Exer 29
+--------------------------------------------------------------
+def main():
+    result = int(input("Enter a whole, positive, number to be converted to hexadecimal: "))
+    hexadecimal = ""
+    while result != 0:
+        remainder = changeDigit(result % 16)
+        hexadecimal = str(remainder) + hexadecimal
+        result = int(result / 16)
+    print(hexadecimal)
+
+def changeDigit(digit):
+    decimal =     [10 , 11 , 12 , 13 , 14 , 15 ]
+    hexadecimal = ["A", "B", "C", "D", "E", "F"]
+    for counter in range(7):
+        if digit == decimal[counter - 1]:
+            digit = hexadecimal[counter - 1]
+    return digit
+
+main()
+--------------------------------------------------------------
+
+
+Exer 30
+----------------------------------------------------
+def main():
+ n = 1
+ a = (3*n - 1)/2*n
+ print(int(a))
+
+
+main()
+----------------------------------------------------
+
+
+Exer 31
+--------------------------------------------------------------
+def reverse(number):
+    x = 0
+    while number != 0:
+        n = number % 10
+        x = x * 10 + n
+        number //= 10
+    return x
+
+def isPalindrome(number):
+    if reverse(number) == number:
+        return True
+
+    else: return False
+
+def main():
+    number = eval(input("Enter the number: "))
+    print("Reverse number is ", reverse(number))
+
+    if isPalindrome(number):
+        print(number, "is a palindrome.")
+    else:
+        print(number, "is not a palindrome.")
+
+main()
+----------------------------------------------------------------
+
+
+Exer 32
+----------------------------------------------------------------
+def displaySortedNumbers():
+    num1 = int(input("Input first number: "))
+    num2 = int(input("Input second number: "))
+    num3 = int(input("Input third number: "))
+
+    a1 = min(num1, num2, num3)
+    a3 = max(num1, num2, num3)
+    a2 = (num1 + num2 + num3) - a1 - a3
+    
+    print("Numbers in sorted order: ", a1, a2, a3)
+    
+
+displaySortedNumbers()
+----------------------------------------------------------------
+
+
+Exer 33
+----------------------------------------------------------------
+def displaySortedNumbers():
+    num1 = int(input("Input first number: "))
+    num2 = int(input("Input second number: "))
+    num3 = int(input("Input third number: "))
+
+    a1 = min(num1, num2, num3)
+    a3 = max(num1, num2, num3)
+    a2 = (num1 + num2 + num3) - a1 - a3
+    
+    print("Numbers in sorted order: ", a1, a2, a3)
+    
+
+displaySortedNumbers()
+-----------------------------------------------------------------
+
+
+Exer 34
+-----------------------------------------------------------------
+foot = 1
+meter = 20
+
+
+def footToMeter(foot):
+    return foot * .305
+
+def meterToFoot(meter):
+    return round((meter/.305),3)
+
+print ("Feet \t Meters |\t Meters\t Feet")
+for foot, meter in zip(range(1,11), range(20, 75, 6)):
+    print ("%s \t %s\t|\t %s \t %s"
+            % (foot, footToMeter(foot), meter, meterToFoot(meter)))
+-------------------------------------------------------------------
+
+
+prjlotto
+-------------------------------------------------------------------
+import random
+
+menu_check = True
+
+# 'checker', compares userNums and winningNums to see if they have won or lost
+def checker(userNums, winningNums):
+
+    if userNums == winningNums:
+        print ("\nCongratulations! You Win $100000!\n")
+        print ("Your numbers: ", userNums)
+        print ("The winning lottery numbers are: ", winningNums, "\n")
+    else:
+        print ("\nSorry, you lose...\n")
+        print ("Your numbers: ", userNums)
+        print ("The winning lottery numbers are: ", winningNums, "\n")
+
+# 'getUserNums', gets user numbers and puts into a sorted list    
+def getUserNums():
+    if choice == '0':
+        userNums = []
+        for x in range(6):
+            nums = int(input("Pick a number 1 through 55: "))
+            if 0 <= nums <= 9:
+                userNums.append(nums)
+            else:
+                input("Error! Invalid input. Press any key to continue...")
+                nums = int(input("Pick a number 1 through 55: "))
+                userNums.append(nums)
+    elif choice == '1':
+        userNums = []
+        for x in range(6):
+            nums = int(input("Pick a number 1 through 45: "))
+            if 1 <= nums <= 45:
+                userNums.append(nums)
+            else:
+                input("Error! Invalid input. Press any key to continue...")
+                nums = int(input("Pick a number 1 through 45: "))
+                userNums.append(nums)
+    elif choice == '2':
+        userNums = []
+        for x in range(6):
+            nums = int(input("Pick a number 1 through 58: "))
+            if 1 <= nums <= 58:
+                userNums.append(nums)
+            else:
+                input("Error! Invalid input. Press any key to continue...")
+                nums = int(input("Pick a number 1 through 58: "))
+                userNums.append(nums)
+    elif choice == '3':
+        userNums = []
+        for x in range(6):
+            nums = int(input("Pick a number 1 through 49: "))
+            if 1 <= nums <= 49:
+                userNums.append(nums)
+            else:
+                input("Error! Invalid input. Press any key to continue...")
+                nums = int(input("Pick a number 1 through 49: "))
+                userNums.append(nums)
+    elif choice == "4":
+        userNums = []
+        for x in range(6):
+            nums = int(input("Pick a number 1 through 42: "))
+            if 0 <= nums <= 9:
+                userNums.append(nums)
+            else:
+                input("Error! Invalid input. Press any key to continue...")
+                nums = int(input("Pick a number 1 through 42: "))
+                userNums.append(nums)
+                
+    return sorted(userNums)
+
+# 'getWinningNums', creates a sorted list with random nums ranging from 0-9 with a range of 3 values
+def getWinningNums():
+    if choice == '0':
+        return sorted(random.sample(range(1,55), 6))
+    elif choice == '1':
+        return sorted(random.sample(range(1,45), 6))
+    elif choice == '2':
+        return sorted(random.sample(range(1,58), 6))
+    elif choice == '3':
+        return sorted(random.sample(range(1,49), 6))
+    elif choice == '4':
+        return sorted(random.sample(range(1,42), 6))
+# 'menu', creates the main menu to choose game or exit program
+def menu():
+    print (30 * "-", "LOTTERY MENU", 30 * "-")
+    print ("[0] 6/55 LOTTO")
+    print ("[1] 6/45 LOTTO")
+    print ("[2] 6/58 LOTTO")
+    print ("[3] 6/49 LOTTO")
+    print ("[4] 6/42 LOTTO")
+    print ("[x] EXIT")
+    print (75 * "-")
+
+# 'main', calls the other functions
+def main():
+    userNums = getUserNums()
+    winningNums = getWinningNums() 
+    checker(userNums, winningNums)
+
+#         
+while menu_check:
+    menu()
+    choice = input("\nEnter your lotto game: ")
+
+    if choice == '0':
+        print (23 * "-")
+        print ("\t6/55 LOTTO")
+        print (23 * "-")
+        menu_check = False
+        main()
+    elif choice == '1':
+        print (23 * "-")
+        print ("\t6/45 LOTTO")
+        print (23 * "-")
+        menu_check = False
+        main()
+    elif choice == '2':
+        print (23 * "-")
+        print ("\t6/58 LOTTO")
+        print (23 * "-")
+        menu_check = False
+        main()
+    elif choice == '3':
+        print (23 * "-")
+        print ("\t6/49 LOTTO")
+        print (23 * "-")
+        menu_check = False
+        main()
+    elif choice == '4':
+        print (23 * "-")
+        print ("\t6/42 LOTTO")
+        print (23 * "-")
+        menu_check = False
+        main()
+    elif choice == 'x' or choice == 'X' :
+        print ("\nThanks for playing!\n")
+        menu_check = False
+    else:
+        input("Error! Invalid input. Press any key to continue...\n")
+-------------------------------------------------------------------------------------------

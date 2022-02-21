@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class seven
+{
+	 public static void main(String[] args) 
+	  {
+		int num1, num2;
+	    Scanner sc = new Scanner(System.in);
+	    
+	    System.out.println("N for Number");
+	    System.out.println("L for Letter\n");
+	    
+	    System.out.println("Input Choice");
+	    String f = sc.next();
+	    //the program is not case sensitive
+	    
+	    switch (f) {
+	    case "N" : case "n" :
+	    System.out.println("\nThis program accepts nos. 1 - 100 and outputs the number in between");
+	    System.out.println("DON'T PUT LETTERS AS THE PROGRAM WILL AUTOMATICALLY TERMINATE SHOULD YOU DO IT");
+	    System.out.println("Input a number:");
+	     num1 = sc.nextInt();
+	     System.out.println("Input another number:");
+	     num2 = sc.nextInt();
+	     
+	     int b = num1 + 1;  
+	    for (int i=b; i<num2;i++)
+	    {
+	    	 if (num2 >= 101) {
+	    		 System.out.println("\nUntil 100 only. The program has been terminated, follow the instructions and run the program again!");  
+	    	 }
+	    	 else
+	    	System.out.print(" " +i);
+	   }
+	    int g = num2 + 1;
+	    for (int i=g; i<num1;i++)
+	    {
+	    	 if (num1 >= 101) {
+	    		 System.out.println("\nUntil 100 only. The program has been terminated, follow the instructions and run the program again!");  	    
+	    	 }
+	    	 else 
+	    	System.out.print(" " +i);
+	    }
+	    	 break; 
+	    
+	    case "L" : case "l" :
+	    { 
+	    	
+		    System.out.println("Input a letter:");
+		    char x = sc.next().charAt(0);
+		     System.out.println("Input another letter:");
+		    char y = sc.next().charAt(0);
+		     int d = (char)x + 1;
+		     for (int i=d; i<y;i++)
+		     { 
+		    	 if (d <= 96) {
+		    		 System.out.println("\nThe program has been terminated, follow the instructions and run the program again!");         
+		    	 }
+		    	 else
+			    	System.out.print(" "+(char)i);
+			   }
+		     int e = (char)y + 1;
+			    for (int i=e; i<x;i++)
+			    {
+			    	 if (d <= 123) {
+			    		 System.out.println("\nThe program has been terminated, follow the instructions and run the program again!");  	       
+			    	 }
+			    	 else 
+			    	System.out.print(" " +(char)i);
+			    }
+			    	 break;
+			    }
+	    
+	    default:System.out.println("The program has been terminated, follow the instructions and run the program again!");
+	    }
+	    }
+}
+

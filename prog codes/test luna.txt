@@ -1,0 +1,50 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+public class linkedlist {
+		private static void list() {
+		LinkedList<String> emp = new LinkedList<String>(); 
+		
+		emp.add(0,"Christopher Lim");
+		emp.add(1,"Christian Gutierrez");
+		emp.add(2,"Jerald Arguelles");
+		emp.add(3,"Rommel Gragasin");
+		emp.add(4,"Justin Dela Serna");
+		emp.add(5,"James Lloyd Estanio");
+		emp.add(6,"Camille Joy Lim");
+		emp.add(7,"Kathlene Corpus");
+		emp.add(8,"Charlie Braganza");
+		emp.add(9,"Lhea Alexis Dayrit");
+		
+		System.out.println("Employee List:");
+		  for(int p=0; p < emp.size(); p++)
+		   {
+		      System.out.println("Employee # "+p+": "+emp.get(p));
+		    } 
+		}
+	
+
+	public static void main(String[] args) {
+		
+	 Scanner sc = new Scanner(System.in);
+	  System.out.println("\n");
+	  System.out.println("\tMENU");
+	  System.out.println("[1]INSERT");
+	  System.out.println("[2]DELETE");
+	  System.out.println("[3]DISPLAY");
+	  System.out.println("[4]SEARCH");
+	  
+	  System.out.println("Enter Operation: ");
+	  
+	  int a = sc.nextInt();
+	
+	  switch (a) {
+	  case '1': 
+		  System.out.println("ill");
+		  break;
+	  default:
+		  System.out.println("yolo");
+	  }
+	}
+
+		
+	}

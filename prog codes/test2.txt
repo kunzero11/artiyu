@@ -1,0 +1,71 @@
+include <iostream>
+
+using namespace std;
+int main()
+{
+	int num,a,sum=0;
+	cout<<"Sorting Numbers \n";
+	cout<<"Enter numbers"<<endl;
+    
+	cin>>num;  
+	system("pause");
+	return 0;
+}
+------------------------
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int accumulator = 0;
+
+        cout<<"Terminate by entering a negative number"<<endl;
+
+        int nValue = 0;  
+	cout<<"Enter number: ";
+	for(;;)
+	{
+        cin>>nValue;
+        // if it's negative...
+        if (nValue < 0)
+        {
+            // ...then exit
+            break;
+        }
+        // ...otherwise add the number to the accumulator
+        accumulator += nValue;
+    }
+    cout<<"The total is "<<accumulator<<endl;
+    cout << "Press Enter to continue..." << endl;
+    cin.ignore(10, 'n');
+    cin.get();
+    return 0;
+}
+-------------------------
+#include <iostream>
+#include <vector> 
+using namespace std;
+int main()
+{
+    int acc = 0;
+        cout<<"Terminate by entering a negative number"<<endl;
+        int num = 0;  
+	cout<<"Enter number: ";
+	for(;;)
+	{
+        cin>>num;
+        if (num < 0)   {
+            break;
+        }
+    }
+	 vector<int> g1; 
+	  for (int i = 1; i <= num; i++) 
+        g1.push_back(i); 
+	   
+	  for (auto i = g1.begin(); i != g1.end(); ++i) 
+        cout << *i << " "; 
+
+
+    system("pause");
+    return 0;
+}

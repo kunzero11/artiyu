@@ -1,0 +1,111 @@
+Option Explicit
+Dim Months(12) As String
+Dim Days(12) As Integer
+Dim Grade As String
+
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdLoad_Click()
+cdlBox.ShowOpen
+imgStudent.Picture = LoadPicture(cdlBox.FileName)
+End Sub
+
+Private Sub cmdNew_Click()
+'Blank out name and picture
+txtName.Text = " "
+imgStudent.Picture = LoadPicture(" ")
+End Sub
+
+Private Sub cmdShow_Click()
+Dim Is_Leap As Integer
+Dim Msg As String, Age As Integer, Pronoun As String
+Dim M As Integer, D As Integer, Y As Integer
+
+'Check for leap year and if February is current month
+If vsbMonth.Value = 2 And ((vsbYear.Value Mod 4 = 0 And vsbYear.Value Mod 100 <> 0) Or vsbYear.Value Mod 400 = 0) Then
+Is_Leap = 1
+Else
+Is_Leap = 0
+End If
+'Check to make sure current day doesn't exceed number of days in month
+If vsbDay.Value > Days(vsbMonth.Value) + Is_Leap Then
+    MsgBox "Only" + Str(Days(vsbMonth.Value) + Is_Leap) + " days in " + Months(vsbMonth.Value), vbOKOnly + vbCritical, "Invalid Birth Date"
+    Exit Sub
+    End If
+'Get current date to compute age
+M = Val(Format(Now, "mm"))
+D = Val(Format(Now, "dd"))
+Y = Val(Format(Now, "yyyy"))
+
+Age = Y - vsbYear
+If vsbMonth.Value > M Or (vsbMonth.Value = M And vsbDay > D) Then Age = Age - 1
+'Check for valid age
+If Age < 0 Then
+    MsgBox "Birth date is before current date.", vbOKOnly + vbCritical, "Invalid Birth Date"
+    Exit Sub
+    End If
+    
+'Check to make sure name entered
+If txtName.Text = " " Then
+MsgBox "The profile requires a name.", vbOKOnly + vbCritical, "No Name Entered"
+Exit Sub
+End If
+
+'Put together student profile message
+Msg = txtName.Text + " is a student in the " + Grade + " grade." + vbCr
+If optSex(0).Value = True Then Pronoun = "He " Else Pronoun = "She "
+Msg = Msg + Pronoun + " is" + Str(Age) + " years old." + vbCr
+MsgBox Msg, vbOKOnly, "Student Profile"
+
+End Sub
+
+Private Sub Form_Load()
+'Set arrays for dates and initialize labels
+Months(1) = "January": Days(1) = 31
+Months(2) = "February": Days(2) = 28
+Months(3) = "March": Days(3) = 31
+Months(4) = "April": Days(4) = 30
+Months(5) = "May": Days(5) = 31
+Months(6) = "June": Days(6) = 30
+Months(7) = "July": Days(7) = 31
+Months(8) = "August": Days(8) = 31
+Months(9) = "September": Days(9) = 30
+Months(10) = "October": Days(10) = 31
+Months(11) = "November": Days(11) = 30
+Months(12) = "December": Days(12) = 31
+lblMonth.Caption = Months(vsbMonth.Value)
+lblDay.Caption = Str(vsbDay.Value)
+lblYear.Caption = Str(vsbYear.Value)
+Grade = "first"
+End Sub
+
+Private Sub optLevel_Click(Index As Integer)
+Select Case Index
+Case 0
+    Grade = "first"
+Case 1
+    Grade = "second"
+Case 2
+    Grade = "third"
+Case 3
+    Grade = "fourth"
+Case 4
+    Grade = "fifth"
+Case 5
+    Grade = "sixth"
+End Select
+End Sub
+
+Private Sub vsbDay_Change()
+lblDay.Caption = Str(vsbDay.Value)
+End Sub
+
+Private Sub vsbMonth_Change()
+lblMonth.Caption = Str(vsbMonth.Value)
+End Sub
+
+Private Sub vsbYear_Change()
+lblYear.Caption = Str(vsbYear.Value)
+End Sub

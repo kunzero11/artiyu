@@ -1,0 +1,90 @@
+I.cmdHLetters
+1. Start
+2. Initialize I as integer
+3. Read value I 
+4. Loop I from number 65 To 90
+5. Display loop horizontally
+6. Repeat steps 4 to 5
+7. Stop
+-----------------
+II.cmdHNumbers
+1. Start
+2. Initialize I as integer
+3. Read value I 
+4. Loop I from 0 to 9
+5. Display loop horizontally
+6. Repeat steps 4 to 5
+7. Stop
+-----------------
+III.cmdVLetters
+1. Start
+2. Initialize I as integer
+3. Read value I 
+4. Loop I from number 65 To 90
+5. Display loop 
+6. Repeat steps 4 to 5
+6. Stop
+-----------------
+IV.cmdVNumbers
+1. Start
+2. Initialize I as integer
+3. Read value I 
+4. Loop I from 0 to 9
+5. Display loop 
+6. Repeat steps 4 to 5
+7. Stop
+-----------------
+V.HalfAst
+1. Start
+2. Initialize rows, i as integer
+3. Read values i, rows
+4. Loop i from 1 to rows
+5. Display loop 
+6. Repeat loop until the desired rows 
+7. Loop I from 9 to 1 Step -1
+8. Display loop 
+9. Repeat loop until the desired rows 
+10. Stop
+-------------------
+VI.WholeAst
+1. Start
+2. Initialize I, I2, I3 as integer
+3. Read values I, I2, I3
+4. Loop I from 1 to 6
+5. Loop I2 from 1 to 6
+6. program inputs Astk and put space 
+7. Repeat Step 6 until desired number
+8. Loop I3 from 1 to I and put carriage return
+9. Repeat step 6 and put asterisk inside space
+10. Repeat Steps 4 to 9 but make I from 1 to 7, I2 from 2 to I, and I3 from I to 7
+11. Display Loop
+12. Stop
+-------------------
+VII.Pascal
+1. Start
+2. Get user input first 
+3. Initialize Row, Inp, Space as integer
+4. Loop Row from 0 To Inp minus 1
+5. program inputs display and put space 
+6. Repeat Step 5 until desired number
+7. Pascal equals to 1 and Loop Column from 0 to Row
+8. program inputs display, pascal and put space 
+9. Pascal equals to pascal multiplied by row minus column is divided to column plus 1
+10. Repeat Step 7 until desired number
+11. program inputs display and put carriage return
+12. Repeat Step 4 until desired number
+13. Display loop
+14. Stop
+------------------
+VIII. descending numbers
+1. Start
+2. Initialize x as integer
+3. Loop x from 0 to 9
+4. Display loop horizontally
+5. Repeat step 3 but make the end loop minus to 1 for every loop
+6. Repeat Step 4 and 5 until the end number from the loop is zero
+7. Stop
+
+
+
+

@@ -1,0 +1,274 @@
+I. Vertical Numbers
+Public Class frmVNumbers
+Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+End
+End Sub
+
+Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+Dim I As Integer
+For I = 0 To 9
+RichTextBox1.AppendText(vbNewLine & I)
+Next
+End Sub
+End Class
+---------------------------------------
+II. Horizontal Numbers
+Public Class frmHNumbers
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim I As Integer
+        For I = 0 To 9
+            RichTextBox1.AppendText(I & " ")
+        Next
+    End Sub
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+End Class
+--------------------------------------
+III. Vertical Letters
+Public Class frmVLetters
+
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim I As Integer
+        For I = 65 To 90
+            RichTextBox1.AppendText(vbNewLine & Chr(I))
+        Next
+    End Sub
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+End Class
+--------------------------------------
+IV. Horizontal Letters
+Public Class frmHLetters
+
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim I As Integer
+        For I = 65 To 90
+            RichTextBox1.AppendText(Chr(I) & " ")
+        Next
+    End Sub
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+End Class
+------------------------------------
+V. Descending Numbers
+Public Class frmDesc
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim x, x2 As Integer
+        For x = 0 To 9
+            For x2 = 0 To 9 - x
+                RichTextBox1.AppendText(x2 & " ")
+            Next x2
+            RichTextBox1.AppendText(vbCrLf)
+        Next x
+        cmdPrint.Enabled = False
+    End Sub
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+End Class
+--------------------------------
+VI. Half Asterisk
+Public Class frmHalfAst
+
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim A, A2 As Integer
+        Dim Asterisk As String
+        For A = 0 To 9
+            For A2 = 0 To A
+                Asterisk = Asterisk & " *"
+            Next A2
+            Asterisk = Asterisk & vbCrLf
+        Next A
+
+        For A = 0 To 8
+            For A2 = A To 8
+                Asterisk = Asterisk & " *"
+            Next A2
+            Asterisk = Asterisk & vbCrLf
+        Next
+        txtDisplay.Text = Asterisk
+    End Sub
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+End Class
+----------------------------------
+VII. Whole Asterisk
+Public Class frmWholeAst
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim I As Integer, I2 As Integer, I3 As Integer, Asterisk As String
+        For I = 1 To 6
+            For I2 = I To 6
+                Asterisk = Asterisk & " "
+            Next I2
+            For I3 = 1 To I
+                Asterisk = Asterisk & " *"
+            Next I3
+            Asterisk = Asterisk & vbCrLf
+        Next I
+
+        For I = 1 To 7
+            For I2 = 2 To I
+                Asterisk = Asterisk & " "
+            Next I2
+            For I3 = I To 7
+                Asterisk = Asterisk & " *"
+            Next I3
+            Asterisk = Asterisk & vbCrLf
+        Next I
+        txtDisplay.Text = Asterisk
+    End Sub
+End Class
+-----------------------------------
+VIII. Pascal's Triangle
+Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+
+    Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
+        Dim Row As Integer, Inp As Integer, Space As Integer, Display As String, Pascal As Integer
+        Inp = txtNum.Text
+
+        For Row = 0 To Inp - 1
+            For Space = Row To Inp
+                Display = Display & " "
+            Next Space
+
+            Pascal = 1
+            For Column = 0 To Row
+                Display = Display & Pascal & " "
+                Pascal = Pascal * (Row - Column) / (Column + 1)
+            Next Column
+
+            Display = Display & vbCrLf
+        Next Row
+        txtD.Text = Display
+    End Sub
+--------------------------------------
+STUDENT DATABASE INPUT SCREEN
+Public Class frmStudent
+    Dim Months(12) As String
+    Dim Days(12) As Integer
+    Dim Grade As String
+
+    Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
+        End
+    End Sub
+
+    Private Sub cmdLoad_Click(sender As Object, e As EventArgs) Handles cmdLoad.Click
+        cdlBox.OpenFile()
+        imgStudent.Image = Image.FromFile(cdlBox.FileName)
+    End Sub
+
+    Private Sub cmdNew_Click(sender As Object, e As EventArgs) Handles cmdNew.Click
+        'Blank out name and picture
+        txtName.Text = " "
+      
+    End Sub
+
+    Private Sub cmdShow_Click(sender As Object, e As EventArgs) Handles cmdShow.Click
+        Dim Is_Leap As Integer
+        Dim Msg As String, Age As Integer, Pronoun As String
+        Dim M As Integer, D As Integer, Y As Integer
+
+        'Check for leap year and if February is current month
+        If vsbMonth.Value = 2 And ((vsbYear.Value Mod 4 = 0 And vsbYear.Value Mod 100 <> 0) Or vsbYear.Value Mod 400 = 0) Then
+            Is_Leap = 1
+        Else
+            Is_Leap = 0
+        End If
+        'Check to make sure current day doesn't exceed number of days in month
+        If vsbDay.Value > Days(vsbMonth.Value) + Is_Leap Then
+            MsgBox("Only" + Str(Days(vsbMonth.Value) + Is_Leap) + " days in " + Months(vsbMonth.Value), vbOKOnly + vbCritical, "Invalid Birth Date")
+            Exit Sub
+        End If
+        'Get current date to compute age
+        M = Val(Format(Now, "mm"))
+        D = Val(Format(Now, "dd"))
+        Y = Val(Format(Now, "yyyy"))
+
+        Age = Y
+        If vsbMonth.Value > M Or (vsbMonth.Value = M) Then Age = Age - 1
+        'Check for valid age
+        If Age < 0 Then
+            MsgBox("Birth date is before current date.", vbOKOnly + vbCritical, "Invalid Birth Date")
+            Exit Sub
+        End If
+
+        'Check to make sure name entered
+        If txtName.Text = " " Then
+            MsgBox("The profile requires a name.", vbOKOnly + vbCritical, "No Name Entered")
+            Exit Sub
+        End If
+
+        'Put together student profile message
+        Msg = txtName.Text + " is a student in the " + Grade + " grade." + vbCr
+        If optSex.Enabled = True Then Pronoun = "He " Else Pronoun = "She "
+        Msg = Msg + Pronoun + " is" + Str(Age) + " years old." + vbCr
+        MsgBox(Msg, vbOKOnly, "Student Profile")
+
+    End Sub
+
+    Private Sub frmStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Set arrays for dates and initialize labels
+        Months(1) = "January" : Days(1) = 31
+        Months(2) = "February" : Days(2) = 28
+        Months(3) = "March" : Days(3) = 31
+        Months(4) = "April" : Days(4) = 30
+        Months(5) = "May" : Days(5) = 31
+        Months(6) = "June" : Days(6) = 30
+        Months(7) = "July" : Days(7) = 31
+        Months(8) = "August" : Days(8) = 31
+        Months(9) = "September" : Days(9) = 30
+        Months(10) = "October" : Days(10) = 31
+        Months(11) = "November" : Days(11) = 30
+        Months(12) = "December" : Days(12) = 31
+        lblMonth.Text = Months(vsbMonth.Value)
+        lblDay.Text = Str(vsbDay.Value)
+        lblYear.Text = Str(vsbYear.Value)
+        Grade = "first"
+    End Sub
+
+    Private Sub optLevel_Click(sender As Object, e As EventArgs) Handles optLevel.Click
+        Dim Index As Integer
+        Select Case Index
+            Case 0
+                Grade = "first"
+            Case 1
+                Grade = "second"
+            Case 2
+                Grade = "third"
+            Case 3
+                Grade = "fourth"
+            Case 4
+                Grade = "fifth"
+            Case 5
+                Grade = "sixth"
+        End Select
+    End Sub
+
+    Private Sub vsbDay_Change()
+        lblDay.Text = Str(vsbDay.Value)
+    End Sub
+
+    Private Sub vsbMonth_Change()
+        lblMonth.Text = Str(vsbMonth.Value)
+    End Sub
+
+    Private Sub vsbYear_Change()
+        lblYear.Text = Str(vsbYear.Value)
+    End Sub
+End Class
+-------------------------------------------

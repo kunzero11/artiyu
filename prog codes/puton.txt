@@ -1,0 +1,90 @@
+Exer5
+emp = input("Enter Employee Name:")
+reg = 40 
+ot = 10 
+regh = 18.25
+oth = 27.78
+regw = (regh*reg)
+otw = (oth*ot)
+total = (regw + otw)
+
+print("Hello " + emp + " you have worked 50 hours this week")
+print("Therefore " + emp +" " + "your total wage are: %0.2f" %total)
+------------------
+Exer6
+amount = eval(input("Enter the amount of your monthly pay:"))
+
+mon1 = (amount/20)
+mon2 = (amount/10-300)
+mon3 = (amount/10)
+str1 = "5 percent is"
+str2 = "7 percent is"
+str3 = "10 percent is"
+strcons = "per month"
+
+
+print(str1 ,mon1, strcons)
+print(str2 ,mon2, strcons)
+print(str3 ,mon3, strcons) 
+--------------------------------
+Exer7
+
+reg = eval(input("Enter the Regular price:"))
+str1 = "Discount amount: "
+str2 = "Sale price: "
+
+disc = 12 
+sale = (reg-disc)
+
+print(str1 ,disc)
+print(str2 ,sale)
+--------------------------------
+Exer8
+emp = input("Enter Employee Name:")
+payAmount = 2200
+payPeriods = 26
+annualPay = (payAmount * payPeriods)
+
+print("Hello " + emp + " you have been paid 26 times this year")
+print("Therefore " + emp +", " + "your total annual pay are: " ,annualPay)
+----------------------------------
+Exer9
+print("Celsius to Fahrenheit Converter\n") 
+
+cel = eval(input("Input Celsius:"))
+
+fah = (9 / 5) * cel + 32
+
+print("The Fahrenheit is: " ,fah)
+-----------------------------------
+Exer10
+v = eval(input("Enter Take-Off Speed:"))
+a = eval(input("Enter Accelaration:"))
+b = 2 
+length = (v**b / b*a)
+
+print("Minimum runway length is: %0.2f " %length)
+---------------------------------
+---------------------------------
+*spoilers*
+Exer11
+print(format(57.467657, "9.3f"))
+print(format(12345678.923, "9.1f"))
+print(format(57.4, ".2f"))
+print(format(57.4, "10.2f"))
+----------------------------------
+Exer12
+print(format(57.467657, "9.3e"))
+print(format(12345678.923, "9.1e"))
+print(format(57.4, ".2e"))
+print(format(57.4, "10.2e"))
+-----------------------------------
+Exer13
+import math
+length = eval(input("Enter length:"))
+
+area = (3*math.sqrt(3)/2*length**2) 
+
+print("The area of pentagon is:%f0.2" %area)
+
+

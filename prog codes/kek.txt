@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class alain
+{
+	 public static void main(String[] args) throws Exception
+	  {
+		int num1, num2;
+	    Scanner in = new Scanner(System.in);
+	    System.out.println("Input a number:");
+	     num1 = in.nextInt();
+	     System.out.println("Input another number:");
+	     num2 = in.nextInt();
+	     
+	     int b = num1 + 1;
+	     
+	    for (int i=b; i<num2;i++)
+	    {
+                                                         
+	    	System.out.println(i);
+	   }
+	  }
+--------------------------------------------------------
+import java.util.Scanner;
+public class alain
+{
+	 public static void main(String[] args) 
+	  {
+		char a, b;
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Input a letter:");
+	     a = sc.nextLine().charAt(0);
+	     System.out.println("Input another letter:");
+	     b = sc.nextLine().charAt(0);
+	     
+	     int d = (char)a + 1;
+		    for (int i=d; i<b;i++)
+		                                                 
+		    	System.out.println((char)i);
+		   }
+}
+
+97 = a
+122 = z 
+
+ 

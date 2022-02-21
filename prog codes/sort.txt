@@ -1,0 +1,1 @@
+ in CPE Plate, write an algorithm and java program that will display 10 elements of student name (surname, firstname) using BUBBLE SORT, SELECTION SORT and INSERTION SORT. 

@@ -1,0 +1,70 @@
+import java.util.LinkedList;
+import java.util.Scanner; 
+public class norman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+       LinkedList<String> emp = new LinkedList<String>(); 
+		
+		emp.add(1,"Christopher Lim");
+		emp.add(2,"Christian Gutierrez");
+		emp.add(3,"Jerald Arguelles");
+		emp.add(4,"Rommel Gragasin");
+		emp.add(5,"Justin Dela Serna");
+		emp.add(6,"James Lloyd Estanio");
+		emp.add(7,"Camille Joy Lim");
+		emp.add(8,"Kathlene Corpus");
+		emp.add(9,"Charlie Braganza");
+		emp.add(10,"Lhea Alexis Dayrit");
+		
+		System.out.println("Employee List:");
+		  for(int p=1; p < emp.size(); p++)
+		   {
+		      System.out.println("Employee # "+p+": "+emp.get(p));
+		    } 
+			
+			System.out.println("\n");
+			char ch;
+			do {  
+			System.out.println("\tMENU");
+			  System.out.println("[1]INSERT");
+			  System.out.println("[2]DELETE");
+			  System.out.println("[3]DISPLAY");
+			  System.out.println("[4]SEARCH");
+			
+		  System.out.println("Enter Operation: ");
+		  String a = sc.next();
+		
+		    
+		  switch (a) {
+		  case "1": 
+			
+			  break;
+		  case "2":
+			  System.out.print("This will delete the first employee, continue? (0 for yes) ");
+			  int n = sc.nextInt();
+			  emp.remove(n);
+			  for(int p=0; p < emp.size(); p++)
+			   {
+			      System.out.println("Employee # "+p+": "+emp.get(p));
+			    } 
+		      break;
+		  case "3":
+			  
+			  break;
+		  case "4": 
+			  
+			  break;
+		  default: 
+			System.out.println("Error");
+			break;
+		  }
+			System.out.println("\nDo you want to continue (Type y or n)");
+           ch = sc.next().charAt(0);                        
+        } while (ch == 'Y'|| ch == 'y');
+		  }
+				
+
+	}
+

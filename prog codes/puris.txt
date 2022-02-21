@@ -1,0 +1,172 @@
+1.cmdHLetters
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdPrint_Click()
+Dim I As Integer
+For I = 65 To 90
+Print Chr(I) & Space$(2);
+Next
+End Sub
+---------------------------------
+2.cmdHNumbers
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdPrint_Click()
+Dim I As Integer
+For I = 0 To 9
+Print I & Space$(1);
+Next I
+End Sub
+----------------------------------
+3.cmdVLetters
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdPrint_Click()
+Dim I As Integer
+For I = 65 To 90
+Print Chr(I)
+Next
+End Sub
+---------------------------
+4.cmdVNumbers
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdPrint_Click()
+Dim I As Integer
+For I = 0 To 9
+Print I
+Next I
+End Sub
+-----------------------------
+5.HalfAst
+Private Sub cmdDisplay_Click()
+Dim rows As Integer, i As Integer
+rows = 10
+For i = 1 To rows
+Print String$(i, "*")
+Next
+For i = 9 To 1 Step -1
+Print String$(i, "*")
+Next
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+-------------------------
+6.WholeAst
+Private Sub cmdDisplay_Click()
+Dim I As Integer, I2 As Integer, I3 As Integer
+   For I = 1 To 6
+    For I2 = I To 6
+        Astk = Astk & " "
+        Next I2
+    For I3 = 1 To I
+         Astk = Astk & " *"
+        Next I3
+       Astk = Astk & vbCrLf
+   Next I
+  
+   For I = 1 To 7
+   For I2 = 2 To I
+       Astk = Astk & " "
+        Next I2
+    For I3 = I To 7
+         Astk = Astk & " *"
+        Next I3
+           Astk = Astk & vbCrLf
+   Next I
+   Print Astk
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+----------------
+7.Pascal
+
+Private Sub cmdDisplay_Click()
+Dim Row As Integer, Inp As Integer, Space As Integer
+Inp = Val(txtNum.Text)
+
+For Row = 0 To Inp - 1
+    For Space = Row To Inp
+    Display = Display & " "
+    Next Space
+    
+    Pascal = 1
+    For Column = 0 To Row
+    Display = Display & Pascal & " "
+    Pascal = Pascal * (Row - Column) / (Column + 1)
+    Next Column
+    
+    Display = Display & vbCrLf
+    Next Row
+    Print Display
+End Sub
+
+Private Sub cmdExit_Click()
+End
+End Sub
+-----------------------
+8.Descending Number
+Private Sub cmdExit_Click()
+End
+End Sub
+
+Private Sub cmdPrint_Click()
+Dim x As Integer
+For x = 0 To 9
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 8
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 7
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 6
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 5
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 4
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 3
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 2
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 1
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+For x = 0 To 0
+    Print x & Space$(2);
+Next
+    Print vbCrLf
+End Sub
+
+
+
+
+
